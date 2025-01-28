@@ -34,4 +34,4 @@ jobs:
             Hey ${{ steps.commit.outputs.merger }}!
 
             You merged this PR, but no labels were added.
-            The list of valid labels is available at https://github.com/pytorch/vision/blob/main/.github/process_commit.py
+            The list of valid labels is available at https://github.com/framp/torchvision-intel/blob/main/.github/process_commit.py

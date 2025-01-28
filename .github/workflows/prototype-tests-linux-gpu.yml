@@ -28,7 +28,7 @@ jobs:
       id-token: write
       contents: read
     with:
-      repository: pytorch/vision
+      repository: framp/torchvision-intel
       runner: ${{ matrix.runner }}
       gpu-arch-type: ${{ matrix.gpu-arch-type }}
       gpu-arch-version: ${{ matrix.gpu-arch-version }}

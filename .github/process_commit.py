@@ -48,7 +48,7 @@ SECONDARY_LABELS = {
 
 
 def query_torchvision(cmd: str, *, accept) -> Any:
-    response = requests.get(f"https://api.github.com/repos/pytorch/vision/{cmd}", headers=dict(Accept=accept))
+    response = requests.get(f"https://api.github.com/repos/framp/torchvision-intel/{cmd}", headers=dict(Accept=accept))
     return response.json()
 
 

@@ -26,7 +26,7 @@ jobs:
       id-token: write
       contents: read
     with:
-      repository: pytorch/vision
+      repository: framp/torchvision-intel
       runner: ${{ matrix.runner }}
       gpu-arch-type: ${{ matrix.gpu-arch-type }}
       gpu-arch-version: ${{ matrix.gpu-arch-version }}
@@ -56,7 +56,7 @@ jobs:
       fail-fast: false
     uses: pytorch/test-infra/.github/workflows/macos_job.yml@main
     with:
-      repository: pytorch/vision
+      repository: framp/torchvision-intel
       # We need an increased timeout here, since the macos-latest runner is the free one from GH
       # and needs roughly 2 hours to just run the test suite
       timeout: 240
@@ -92,7 +92,7 @@ jobs:
       id-token: write
       contents: read
     with:
-      repository: pytorch/vision
+      repository: framp/torchvision-intel
       runner: ${{ matrix.runner }}
       gpu-arch-type: ${{ matrix.gpu-arch-type }}
       gpu-arch-version: ${{ matrix.gpu-arch-version }}
@@ -115,7 +115,7 @@ jobs:
       id-token: write
       contents: read
     with:
-      repository: pytorch/vision
+      repository: framp/torchvision-intel
       test-infra-ref: main
       script: |
         set -euo pipefail
@@ -150,7 +150,7 @@ jobs:
       contents: read
     if: contains(github.event.pull_request.labels.*.name, 'run-extended')
     with:
-      repository: pytorch/vision
+      repository: framp/torchvision-intel
       test-infra-ref: main
       script: |
         set -euo pipefail
@@ -172,7 +172,7 @@ jobs:
         echo '::endgroup::'
 
         echo '::group::Install testing utilities'
-        # TODO: remove the <8 constraint on pytest when https://github.com/pytorch/vision/issues/8238 is closed
+        # TODO: remove the <8 constraint on pytest when https://github.com/framp/torchvision-intel/issues/8238 is closed
         pip install --progress-bar=off "pytest<8"
         echo '::endgroup::'
 

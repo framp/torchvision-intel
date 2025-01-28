@@ -11,7 +11,7 @@ jobs:
       id-token: write
       contents: read
     with:
-      repository: pytorch/vision
+      repository: framp/torchvision-intel
       test-infra-ref: main
       script: |
         set -euo pipefail
@@ -41,7 +41,7 @@ jobs:
       id-token: write
       contents: read
     with:
-      repository: pytorch/vision
+      repository: framp/torchvision-intel
       test-infra-ref: main
       script: |
         set -euo pipefail
@@ -71,7 +71,7 @@ jobs:
       id-token: write
       contents: read
     with:
-      repository: pytorch/vision
+      repository: framp/torchvision-intel
       test-infra-ref: main
       script: |
         set -euo pipefail

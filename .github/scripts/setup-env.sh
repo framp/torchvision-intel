@@ -34,7 +34,7 @@ if [[ "${OS_TYPE}" == "macos" && $(uname -m) == x86_64 ]]; then
 fi
 
 echo '::group::Create build environment'
-# See https://github.com/pytorch/vision/issues/7296 for ffmpeg
+# See https://github.com/framp/torchvision-intel/issues/7296 for ffmpeg
 conda create \
   --name ci \
   --quiet --yes \
@@ -47,7 +47,7 @@ conda activate ci
 conda install --quiet --yes libjpeg-turbo -c pytorch
 pip install --progress-bar=off --upgrade setuptools==72.1.0
 
-# See https://github.com/pytorch/vision/issues/6790
+# See https://github.com/framp/torchvision-intel/issues/6790
 if [[ "${PYTHON_VERSION}" != "3.11" ]]; then
   pip install --progress-bar=off av!=10.0.0
 fi
