@@ -1,9 +1,6 @@
 name: pr-labels
 
 on:
-  push:
-    branches:
-      - main
 
 jobs:
   is-properly-labeled:

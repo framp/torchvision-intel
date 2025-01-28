@@ -2,11 +2,6 @@ name: CMake
 
 on:
   pull_request:
-  push:
-    branches:
-      - nightly
-      - main
-      - release/*
   workflow_dispatch:
 
 jobs:
@@ -42,7 +37,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - runner: macos-12
+          - runner: macos-latest
           - runner: macos-m1-stable
       fail-fast: false
     uses: pytorch/test-infra/.github/workflows/macos_job.yml@main
